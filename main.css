@@ -1,0 +1,138 @@
+:root {
+  --Red: hsl(4, 100%, 67%);
+
+  --Blue-800: hsl(234, 29%, 20%);
+  --Blue-700: hsl(235, 18%, 26%);
+  --Grey: hsl(0, 0%, 58%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font  */
+  --font-family: "Roboto", sans-serif;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 700;
+
+  /* Spacing */
+  --space-unit: 8px;
+  --space-xs: calc(var(--space-unit) * 0.5);
+  --space-sm: var(--space-unit);
+  --space-md: calc(var(--space-unit) * 2);
+  --space-lg: calc(var(--space-unit) * 3);
+  --space-xl: calc(var(--space-unit) * 4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Blue-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 900px;
+  padding-inline: 30px;
+}
+.main-content {
+  background-color: var(--White);
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#form {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: 30px;
+  justify-content: center;
+}
+
+.form-head,
+.success-head {
+  color: var(--Blue-800);
+  font-size: 45px;
+}
+.form-para,
+.success-para {
+  color: var(--Blue-700);
+}
+.form-list {
+  color: var(--Blue-700);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  list-style-position: inside;
+  list-style-image: url("assets/images/icon-list.svg");
+  font-size: 15px;
+}
+.form-list-one {
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.email-label {
+  margin-bottom: var(--space-sm);
+}
+.email-field {
+  padding: 15px 20px;
+  border-radius: 10px;
+  outline: transparent;
+  border: 1px solid var(--Grey);
+}
+
+.form-submit-button,
+.succes-submit-button {
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--Blue-800);
+  color: var(--White);
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.4s;
+}
+
+.form-submit-button:hover,
+.succes-submit-button:hover {
+  background-color: var(--Red);
+}
+
+.form-submit-button:disabled {
+  background-color: var(--Grey);
+}
+
+.illustration-image {
+  max-width: 330px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.success {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.success-image {
+  width: 50px;
+}
+
+form.active,
+.success.active {
+  display: flex !important;
+}
+
+main.active {
+  max-width: 400px;
+}
