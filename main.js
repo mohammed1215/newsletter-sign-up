@@ -52,3 +52,21 @@ function handleDismiss(e) {
   document.querySelector(".illustration-image").style.display = "block"
   document.querySelector("main").classList.remove("active")
 }
+
+// when the page render set the image to suit the size
+if (window.innerWidth <= 768) {
+  document.querySelector("img.illustration-image").src =
+    "assets/images/illustration-sign-up-mobile.svg"
+}
+
+window.addEventListener("resize", (e) => {
+  // Handle images
+  if (window.innerWidth > 768) {
+    document.querySelector("img.illustration-image").src =
+      "assets/images/illustration-sign-up-desktop.svg"
+  } else {
+    document.querySelector("img.illustration-image").src =
+      "assets/images/illustration-sign-up-mobile.svg"
+  }
+  console.log(window.innerWidth)
+})
